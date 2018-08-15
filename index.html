@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			font-family: Arial;
+		}
+		
+		table{
+			border:0;
+		}
+		thead{
+			background-color: rgb(227,223,215);
+		}
+		th{
+			padding: 3px 10px;
+		}
+		.cont{
+			width:800px;
+			height: 500px;
+			border: 1px solid black;
+		}
+		.ball{
+			width: 10px;
+			height: 10px;
+			background-color: red;
+			border: 1px solid black;
+			border-radius: 5px;
+			position: relative; 
+			left: 0px;
+			top: 0px;
+		}
+	</style>
+		
+	<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+	<script type="text/javascript" src="js/bouncer.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+	
+	</head>
+<body>
+<table>
+	<tr>
+		<thead>
+			<tr><th>Velocidad<th>Tamaño<th>Toques<th>Progreso
+		</thead>
+		<tbody>
+			<tr class="subheader">
+				<td><input type="range" id="idVel" min="1" max="10" value="1">
+				<td><input type="range" id="idTam" min="10" max="50" value="10" step="10">
+				<td><input type="text" id="idRebotes">
+				<td><progress value="0" id="idPB"></progress><br><input type="button" value="Iniciar" id="idStart">
+</table>
+<section id="SecContainer">
+	<div class="cont" id="idCont">
+		<div class="ball" id="idBall"></div>
+	</div>
+</section>
+</body>
+</html>
